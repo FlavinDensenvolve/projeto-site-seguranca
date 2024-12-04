@@ -1,0 +1,88 @@
+---
+import Layout from '../layouts/Layout.astro';
+import InfoCard from '../components/InfoCard.astro';
+---
+
+<Layout title="Recursos de Segurança Cibernética">
+  <main class="container mx-auto px-4 py-8">
+    <h1 class="text-4xl font-bold mb-8 text-center">Recursos</h1>
+
+    <div class="max-w-4xl mx-auto">
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6">Guias e Tutoriais</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <InfoCard
+            title="Guia de Senhas"
+            description="Tutorial completo sobre como criar e gerenciar senhas seguras."
+            icon="🔑"
+            link="/guias/senhas"
+          />
+          <InfoCard
+            title="Proteção contra Malware"
+            description="Aprenda a proteger seu sistema contra malware e vírus."
+            icon="🦠"
+            link="/guias/malware"
+          />
+          <InfoCard
+            title="Backup Seguro"
+            description="Como fazer backup de seus dados de forma segura e eficiente."
+            icon="💾"
+            link="/guias/backup"
+          />
+          <InfoCard
+            title="Navegação Segura"
+            description="Dicas para navegar com segurança na internet."
+            icon="🌐"
+            link="/guias/navegacao"
+          />
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6">Ferramentas Recomendadas</h2>
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <ul class="space-y-4">
+            <li class="flex items-center">
+              <span class="text-2xl mr-3">🔒</span>
+              <div>
+                <h3 class="font-bold">Gerenciadores de Senha</h3>
+                <p class="text-gray-600">LastPass, 1Password, Bitwarden</p>
+              </div>
+            </li>
+            <li class="flex items-center">
+              <span class="text-2xl mr-3">🛡️</span>
+              <div>
+                <h3 class="font-bold">Antivírus</h3>
+                <p class="text-gray-600">Bitdefender, Kaspersky, Norton</p>
+              </div>
+            </li>
+            <li class="flex items-center">
+              <span class="text-2xl mr-3">🔐</span>
+              <div>
+                <h3 class="font-bold">VPN</h3>
+                <p class="text-gray-600">NordVPN, ExpressVPN, ProtonVPN</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold mb-6">Links Úteis</h2>
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <ul class="space-y-4">
+            <li>
+              <a href="https://www.cert.br" class="text-blue-600 hover:text-blue-800">CERT.br - Centro de Estudos e Respostas a Incidentes de Segurança</a>
+            </li>
+            <li>
+              <a href="https://www.gov.br/anpd" class="text-blue-600 hover:text-blue-800">ANPD - Autoridade Nacional de Proteção de Dados</a>
+            </li>
+            <li>
+              <a href="https://internetsegura.br" class="text-blue-600 hover:text-blue-800">Internet Segura - Dicas e orientações</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+</Layout>

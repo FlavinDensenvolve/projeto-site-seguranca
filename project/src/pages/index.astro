@@ -1,0 +1,70 @@
+---
+import Layout from '../layouts/Layout.astro';
+import InfoCard from '../components/InfoCard.astro';
+---
+
+<Layout title="Segurança Cibernética - Início">
+  <main class="container mx-auto px-4 py-8">
+    <section class="text-center mb-16">
+      <h1 class="text-5xl font-bold mb-6">Segurança Cibernética</h1>
+      <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+        Proteja seus dados e sua privacidade digital com informações atualizadas sobre segurança cibernética, LGPD e melhores práticas de proteção.
+      </p>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-8 text-center">Destaques</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <InfoCard
+          title="Proteção Contra Ataques"
+          description="Aprenda a identificar e prevenir diferentes tipos de ataques cibernéticos."
+          icon="🛡️"
+          link="/prevencao"
+        />
+        <InfoCard
+          title="Conformidade LGPD"
+          description="Entenda como adequar sua empresa às exigências da Lei Geral de Proteção de Dados."
+          icon="📋"
+          link="/lgpd"
+        />
+        <InfoCard
+          title="Segurança Pessoal"
+          description="Dicas práticas para proteger seus dados pessoais no ambiente digital."
+          icon="🔒"
+          link="/dicas"
+        />
+      </div>
+    </section>
+
+    <section class="bg-gray-50 p-8 rounded-lg mb-16">
+      <h2 class="text-3xl font-bold mb-6 text-center">Últimas Atualizações</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow">
+          <span class="text-sm text-gray-500">Novo</span>
+          <h3 class="text-xl font-bold mb-2">Ransomware em 2024</h3>
+          <p class="text-gray-700">Conheça as novas ameaças e aprenda a se proteger contra ataques de ransomware.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <span class="text-sm text-gray-500">Atualizado</span>
+          <h3 class="text-xl font-bold mb-2">Guia de Senhas Seguras</h3>
+          <p class="text-gray-700">Novas recomendações para criar e gerenciar senhas fortes em 2024.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="text-center">
+      <h2 class="text-3xl font-bold mb-6">Precisa de ajuda?</h2>
+      <p class="text-xl text-gray-700 mb-8">
+        Explore nossos recursos ou entre em contato para suporte especializado.
+      </p>
+      <div class="flex justify-center gap-4">
+        <a href="/recursos" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+          Ver Recursos
+        </a>
+        <a href="/contato" class="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700">
+          Fale Conosco
+        </a>
+      </div>
+    </section>
+  </main>
+</Layout>

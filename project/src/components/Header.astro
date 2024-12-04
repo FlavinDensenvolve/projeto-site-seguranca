@@ -1,0 +1,62 @@
+---
+const menuItems = [
+  { href: '/', label: 'Início' },
+  { 
+    href: '/prevencao',
+    label: 'Prevenção',
+    submenu: [
+      { href: '/prevencao#senhas', label: 'Senhas Seguras' },
+      { href: '/prevencao#autenticacao', label: 'Autenticação' },
+      { href: '/prevencao#malware', label: 'Proteção contra Malware' }
+    ]
+  },
+  { 
+    href: '/lgpd',
+    label: 'LGPD',
+    submenu: [
+      { href: '/lgpd#direitos', label: 'Direitos' },
+      { href: '/lgpd#empresas', label: 'Para Empresas' },
+      { href: '/lgpd#conformidade', label: 'Conformidade' }
+    ]
+  },
+  { 
+    href: '/dicas',
+    label: 'Dicas',
+    submenu: [
+      { href: '/dicas#navegacao', label: 'Navegação Segura' },
+      { href: '/dicas#backup', label: 'Backup' },
+      { href: '/dicas#phishing', label: 'Phishing' }
+    ]
+  },
+  { href: '/recursos', label: 'Recursos' }
+];
+---
+
+<header class="bg-blue-900 text-white py-4">
+  <nav class="container mx-auto px-4">
+    <div class="flex justify-between items-center">
+      <a href="/" class="text-2xl font-bold">🔒 CyberSec</a>
+      
+      <ul class="flex space-x-6">
+        {menuItems.map(item => (
+          <li class="group relative">
+            <a href={item.href} class="hover:text-blue-300 py-2">
+              {item.label}
+            </a>
+            {item.submenu && (
+              <ul class="absolute hidden group-hover:block bg-blue-800 rounded-md p-2 w-48 shadow-lg z-50">
+                {item.submenu.map(subItem => (
+                  <li>
+                    <a href={subItem.href} class="block px-4 py-2 hover:bg-blue-700 rounded">
+                      {subItem.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))}
+      </ul>
+    </div>
+  </nav>
+</header>
